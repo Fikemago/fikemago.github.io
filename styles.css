@@ -1,0 +1,115 @@
+@media (max-width: 480px) {
+    /* Voeg hier stijlen toe voor kleinere schermen */
+    .homepage {
+        padding: 0px; /* Verminder de padding voor kleinere schermen */
+    }
+
+    .disclaimer {
+        font-size: 12px; /* Verminder de tekstgrootte voor kleinere schermen */
+        padding: 5px 10px; /* Verminder de padding voor kleinere schermen */
+    }
+}
+
+
+
+body {
+    /* background-color: #ababa6; */
+    background-color: #252a36;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+.homepage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color:transparant;
+    border-radius: 10px;
+
+}
+
+.disclaimer {
+    background-color: #09f018;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: black;
+
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.level {
+    margin-top: 20px;
+}
+
+.level-button {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Verwijder standaard onderstreping van links */
+    font-size: 24px;
+    /* background-color: #154880;*/
+    /*background-color: #801612;*/
+    background-color: #7f00ff;
+    border: 5px solid white;
+    border-radius: 15px;
+    /* Voeg afgeronde hoeken toe */
+    color: white;
+    padding: 10px 20px;
+    /* Voeg wat ruimte tussen tekst en randen toe */
+    text-align: center;
+    /* Centreer de tekst binnen het element */
+    margin-top: 20px;
+    /* Voeg wat ruimte bovenaan toe */
+}
+
+.level-button:hover {
+    background-color: #09f018;
+    /* Verander de achtergrondkleur bij hover */
+}
+
+.level-container {
+    display: inline-block;
+    margin: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Verwijder standaard onderstreping van links */
+    font-size: 18px;
+    border: 0px solid white;
+    border-radius: 15px;
+    /* Voeg afgeronde hoeken toe */
+    color: white;
+    padding: 5px 5px;
+    /* Voeg wat ruimte tussen tekst en randen toe */
+    text-align: center;
+    /* Centreer de tekst binnen het element */
+    margin-top: 20px;
+    /* Voeg wat ruimte bovenaan toe */
+}
+
+.container {
+    color: white;
+}
+
+

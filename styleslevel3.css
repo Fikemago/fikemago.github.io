@@ -1,0 +1,263 @@
+  /* Mediaquery voor grotere schermen */
+
+  @media screen and (min-width: 768px) {
+    #leftBtn, #rightBtn, #leftleftBtn, #rightleftBtn, #carBtn {
+      font-size: 24px; /* Pas hier de gewenste grootte aan voor grotere schermen */
+      }
+    }
+
+    @keyframes shake {
+      0%, 100% {
+          transform: translateX(0);
+      }
+      25%, 75% {
+          transform: translateX(-5px);
+      }
+      50% {
+          transform: translateX(5px);
+      }
+  }
+      body {
+      /* background-color: #ababa6;*/
+      background-image: linear-gradient(to right, #1b2245, #ba732d);
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    body:not(.game-ended) {
+      animation: shake 0.5s ease-in-out infinite;
+    }
+
+
+  #game-area {
+      top: 40%; /* Plaats #game-area verticaal in het midden van het scherm */
+      transform: translateY(-50%); /* Breng #game-area naar het midden van het scherm */
+      background-color: transparent; /* transparent */
+      width: 100%; /* Beperkte ruimte voor het spel */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border: 0px solid black;
+      padding: 0px;
+      box-sizing: border-box;
+      position: relative;
+      margin-bottom: 0px;
+
+    }
+  #word {
+    font-size: 20px;
+    /*background-color: #154880;*/
+    background-color: #15488061;
+    border: 5px solid white;
+    border-radius: 15px; /* Voeg afgeronde hoeken toe */
+    color: #f2eddf;
+    padding: 10px 20px; /* Voeg wat ruimte tussen tekst en randen toe */
+    text-align: center; /* Centreer de tekst binnen het element */
+    margin-top: 20px; /* Voeg wat ruimte bovenaan toe */
+  }
+  #score-display {
+    /* Voeg ruimte boven het score-display-element toe */
+    margin-top: 10px; /* Pas de waarde aan zoals gewenst */
+  }
+
+    #instruction {
+      color: #f2eddf;
+      font-size: 18px;
+      background-color: #7f00ff;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 15px;
+      text-align: center;
+      width: 100%;
+    }
+    #buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .button-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 20%; /* mobiel: Verdeel de beschikbare breedte in 5 delen voor 5 knoppen */
+    padding: 5 5px; /* Voeg wat ruimte toe aan de zijkanten van de container */
+  }
+
+  #leftBtn, #rightBtn, #leftleftBtn, #rightleftBtn {
+    color: #f2eddf;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 8vw; /* Hier gebruiken we 'vw' om de grootte responsief te maken */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Voeg een marge toe aan de knoppen */
+    margin: 0 10px;
+    border: none;
+    outline: none;
+  }
+
+  #carBtn {
+    top: 50%; /* Plaats de auto verticaal in het midden van #game-area */
+    transform: translate(-50%, -50%); /* Breng de auto naar het midden van #game-area */
+    z-index: 100;
+    font-size: 12vw;
+    background-color: transparent;
+    width: 10%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 0px;
+    position: absolute;
+    /* transform: translateX(-50%);*/
+    /*transition: transform 0.3s ease;*/ /* Voeg alleen transform overgang toe */
+    transition: left 0.5s ease, top 0.5s ease;
+    max-width: 80px; /* Optioneel: maximale breedte voor de auto */
+    animation: shake 2s ease-in-out infinite;
+  }
+
+
+  #leftBtn {
+    left: 0; /* Plaats de linkerrand van de knop aan de linkerkant van het game-area */
+    right: 50%; /* Plaats de rechterrand van de knop in het midden */
+    z-index: 1; /* Zorg ervoor dat de knop boven de lijnen wordt weergegeven */
+  }
+  #rightBtn {
+    left: 75%; /* Plaats de linkerrand van de knop in het midden */
+    right: 0; /* Plaats de rechterrand van de knop aan de rechterkant van het game-area */
+    z-index: 1; /* Zorg ervoor dat de knop boven de lijnen wordt weergegeven */
+  }
+  #leftleftBtn {
+    left: 0; /* Plaats de linkerrand van de knop aan de linkerkant van het game-area */
+    right: 75%; /* Plaats de rechterrand van de knop in het midden */
+    z-index: 1; /* Zorg ervoor dat de knop boven de lijnen wordt weergegeven */
+  }
+  #rightleftBtn {
+    left: 50%; /* Plaats de linkerrand van de knop in het midden */
+    right: 0; /* Plaats de rechterrand van de knop aan de rechterkant van het game-area */
+    z-index: 1; /* Zorg ervoor dat de knop boven de lijnen wordt weergegeven */
+  }
+
+
+  .correct {
+    background-color: black !important;
+    transform: scale(1.2);
+  }
+  .incorrect {
+    background-color: #09f018 !important;
+    transform: scale(1.2);
+  }
+
+  .click-effect {
+    transform: scale(1.2); /* Verander de schaal van de knop */
+    transition: color 0.3s ease, transform 0.3s ease; /* Voeg overgangen toe */
+    /* Voeg de oorspronkelijke grootte toe */
+    width: auto;
+    height: auto;
+  }
+
+  @keyframes verticalMove {
+    0% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+  #firstLine {
+    position: absolute;
+    width: 0.5px;
+    height: 100%;
+    background-color: #dbc8af;
+    left: 20%; /* Aangepaste waarde om de eerste lijn te positioneren */
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: blur(1px);
+    animation: verticalMove 4s linear infinite;
+  }
+
+  #leftLine {
+    position: absolute;
+    width: 0.5px;
+    height: 100%;
+    background-color: #dbc8af;
+    left: 40%; /* Aangepaste waarde om de linkerlijn te positioneren */
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: blur(1px);
+    animation: verticalMove 5s linear infinite;
+  }
+
+  #middleLine {
+    position: absolute;
+    width: 0.5px;
+    height: 100%;
+    background-color: #dbc8af;
+    left: 60%; /* Aangepaste waarde om de middellijn te positioneren */
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: blur(1px);
+    animation: verticalMove 3s linear infinite;
+  }
+
+  #rightLine {
+    position: absolute;
+    width: 0.5px;
+    height: 100%;
+    background-color: #dbc8af;
+    left: 80%; /* Aangepaste waarde om de rechterlijn te positioneren */
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: blur(1px);
+    animation: verticalMove 6s linear infinite;
+  }
+  #score-display {
+    /* Voeg ruimte boven het score-display-element toe */
+    margin-top: 10px; /* Pas de waarde aan zoals gewenst */
+    color: #f2eddf;
+    font-size: 18px;
+  }
+  #instruction2 {
+    color: #f2eddf;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    border-radius: 15px;
+  }
+
+  .retry-button {
+    background-color: #18da3b;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.5s ease-in-out; /* Voeg een overgang toe voor de achtergrondkleur en transform */
+    animation: pulse 2s infinite; /* Definieer een pulsatie-animatie die oneindig doorloopt */
+  }
+  .retry-button:hover {
+    background-color: #39a78e;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Normale grootte */
+    }
+    50% {
+      transform: scale(1.2); /* Vergroting op 50% van de animatie */
+    }
+    100% {
+      transform: scale(1); /* Terug naar normale grootte aan het einde van de animatie */
+    }
+  }

@@ -1,0 +1,257 @@
+/* Place your CSS styles in this file */
+
+@media (max-width: 768px) {
+    #game-area {
+      width: 80%;
+      height: 40vh;
+    }
+
+    #leftBtn, #rightBtn {
+      width: 10%;
+      height: 10%;
+    }
+
+      body {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+
+
+  body {
+      /* background-color: #ababa6; */
+      /* background-color: #515461; */
+      background-image: linear-gradient(to right, #6e080b, #ba732d);
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+    }
+
+    /* game-area:not(.game-ended) {
+      animation: shake 1s ease-in-out infinite;
+    }*/
+
+    #game-area {
+      top: 50%; /* Plaats #game-area verticaal in het midden van het scherm */
+      background-color: transparent;
+      width: 80%; /* Beperkte ruimte voor het spel */
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border: 0px solid black;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+      animation: shake 1s ease-in-out infinite;
+    }
+
+  .game-container {
+    position: relative;
+  }
+
+    #word {
+    font-size: 24px;
+    /* background-color: #154880;*/
+    background-color: #040c4a80;
+    border: 5px solid white;
+    border-radius: 15px; /* Voeg afgeronde hoeken toe */
+    color: #f2eddf;
+    padding: 10px 20px; /* Voeg wat ruimte tussen tekst en randen toe */
+    text-align: center; /* Centreer de tekst binnen het element */
+    margin-top: 20px; /* Voeg wat ruimte bovenaan toe */
+    }
+    #instruction {
+      color: #f2eddf;
+      text-align: center;
+      font-size: 18px;
+      background-color: #7f00ff;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 15px;
+      width: 100%;
+    }
+    #instruction2 {
+      color: #f2eddf;
+      font-size: 18px;
+      margin-bottom: 2px;
+      margin-top: 2px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+
+    @keyframes shake {
+      0%, 100% {
+          transform: translateX(0);
+      }
+      25%, 75% {
+          transform: translateX(-5px);
+      }
+      50% {
+          transform: translateX(5px);
+      }
+    }
+
+    @keyframes verticalMove {
+      0% {
+          transform: translateY(50%);
+      }
+      100% {
+          transform: translateY(-50%);
+      }
+    }
+
+  .emoji {
+      font-size: 48px;
+      cursor: pointer;
+      /*transition: transform 0.2s ease-in-out;*/
+
+  }
+  .emoji-container {
+      /*display: flex; /* Hiermee wordt flexbox-layout ingeschakeld */
+      justify-content: center; /* Horizontaal centreren */
+      gap: 20px; /* Ruimte tussen de emoji's */
+      background-color: red;
+
+
+
+  }
+
+  .message {
+    font-size: 24px; /* Change the font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Change the text color */
+    background-color: red; /* Change the background color */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 8px; /* Round the corners of the message */
+    text-align: center;
+  }
+
+    #buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+  .click-effect {
+    transform: scale(1.2); /* Verander de schaal van de knop */
+    /* transition: color 0.3s ease, transform 0.3s ease; /* Voeg overgangen toe */
+    /* Voeg de oorspronkelijke grootte toe */
+    width: auto;
+    height: auto;
+  }
+    #leftBtn, #rightBtn {
+      /*background-color: #ababa6; */
+      background-color: transparent;
+      padding: 10px 20px;
+      font-size: 48px;
+      cursor: pointer;
+      /* transition: background-color 0.3s ease;*/
+      position: absolute;
+      width: 10%;
+      height: 10%;
+      border: 0px solid white; /* Voeg witte rand toe */
+    }
+    #leftBtn {
+      left: 0;
+
+    }
+    #rightBtn {
+      right: 0;
+      /*animation: verticalMove 4s linear infinite;*/
+
+    }
+    #leftBtn:active, #rightBtn:active {
+      background-color: transparent; /* Zorg ervoor dat de achtergrondkleur hetzelfde blijft tijdens de actieve toestand */
+  }
+    .retry-button {
+    background-color: #18da3b;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .retry-button:hover {
+    background-color: #39a78e;
+  }
+  .next-level-button{
+    background-color: #06052a;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.5s ease-in-out;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Normale grootte */
+    }
+    50% {
+      transform: scale(1.2); /* Vergroting op 50% van de animatie */
+    }
+    100% {
+      transform: scale(1); /* Terug naar normale grootte aan het einde van de animatie */
+    }
+  }
+
+
+  .correct {
+    background-color: black !important;
+    transform: scale(1.2);
+  }
+  .incorrect {
+    background-color: #09f018 !important;
+    transform: scale(1.2);
+  }
+
+  #middleLine {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  #diamonds-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .diamond {
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    #score-display {
+      /* Voeg ruimte boven het score-display-element toe */
+      margin-top: 10px; /* Pas de waarde aan zoals gewenst */
+      color: #f2eddf;
+      font-size: 18px;
+    }
+
+    .emoji-click::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, transparent 0%, rgba(255, 165, 0, 0.7) 80%); /* Oranje radiale gradiënt */
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform 0.3s ease; /* Voeg een overgang toe voor het ontploffingseffect */
+      border-radius: 50%;
+    }
+
+    .emoji-click:active::before {
+      transform: scale(1.5); /* Schaal het pseudo-element om het ontploffingseffect te simuleren */
+    }
