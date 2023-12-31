@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hello!</title>
-        <style>
-            h1 {
-                color:rgb(255, 0, 217);
-            }
-        </style>
+        <title>Scholenkeuze lijst</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Welcome to my website!deze</h1>
-        <h2>Hello!</h2>
-        Hello, world!</body>
+        <h1>Informatie over scholen</h1>
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Naam school</th>
+                <th scope="col">Niveau</th>
+                <th scope="col">Afstand</th>
+                <th scope="col">Open dagen</th>
+                <th scope="col">Opmerking</th>
+                <th scope="col">Overig</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Segbroek college</td>
+                <td>VWO</td>
+                <td>4 km, 10 min.</td>
+                <td>2 feb. inschrijven<br>
+                3 maart, inschrijven</td>
+                <td>Ingeschreven voor<br>
+                Meedoen aan </td>
+                <td>Extra lessen wiskunde</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Segbroek college</td>
+                <td>VWO</td>
+                <td>4 km, 10 min.</td>
+                <td>2 feb. inschrijven<br>
+                3 maart, inschrijven</td>
+                <td>Ingeschreven voor<br>
+                Meedoen aan </td>
+                <td>Extra lessen wiskunde</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Segbroek college</td>
+                <td>VWO</td>
+                <td>4 km, 10 min.</td>
+                <td>2 feb. inschrijven<br>
+                3 maart, inschrijven</td>
+                <td>Ingeschreven voor<br>
+                Meedoen aan </td>
+                <td>Extra lessen wiskunde</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-hover table-dark" id="myTable">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Naam school</th>
+                <th scope="col">Niveau</th>
+                <th scope="col">Afstand</th>
+                <th scope="col">Open dagen</th>
+                <th scope="col">Opmerking</th>
+                <th scope="col">Overig</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><input type="text" class="form-control" value="Segbroek college"></td>
+                <td><input type="text" class="form-control" value="VWO"></td>
+                <td><input type="text" class="form-control" value="4 km, 10 min."></td>
+                <td>
+                  <input type="text" class="form-control" value="2 feb. inschrijven">
+                  <br>
+                  <input type="text" class="form-control" value="3 maart, inschrijven">
+                </td>
+                <td>
+                  <input type="text" class="form-control" value="Ingeschreven voor">
+                  <br>
+                  <input type="text" class="form-control" value="Meedoen aan">
+                </td>
+                <td><input type="text" class="form-control" value="Extra lessen wiskunde"></td>
+              </tr>
+              <!-- Voeg meer rijen toe zoals hierboven -->
+            </tbody>
+          </table>
+          
+
+
+        </body>
 </html>
