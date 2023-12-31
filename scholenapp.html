@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eenvoudige Webapp zonder Database</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="scholenapp.styles.css">
+</head>
+<body>
+  <h1>Scholen</h1>
+
+  <table class="table" border="1" id="schoolsTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Naam school</th>
+        <th>Niveau</th>
+        <th>Afstand</th>
+        <th>Open dagen</th>
+        <th>Opmerking</th>
+        <th>Overig</th>
+      </tr>
+    </thead>
+    <tbody id="schoolsTableBody"></tbody>
+  </table>
+
+  <form id="addSchoolForm">
+    <label for="name">Naam school:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="level">Niveau:</label>
+    <input type="text" id="level" name="level" required><br>
+
+    <label for="distance">Afstand:</label>
+    <input type="text" id="distance" name="distance" required><br>
+
+    <label for="open_days">Open dagen:</label>
+    <input type="text" id="open_days" name="open_days" required><br>
+
+    <label for="note">Opmerking:</label>
+    <input type="text" id="note" name="note" required><br>
+
+    <label for="other">Overig:</label>
+    <input type="text" id="other" name="other" required><br>
+
+    <button type="button" onclick="addSchool()">Toevoegen</button>
+    <button type="button" onclick="clearLocalStorage()">Wis Gegevens</button>
+    <button type="button" onclick="downloadData()">Download Gegevens</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+
+  <script src="scholenappScript.js"></script>
+  
+</body>
+</html>
