@@ -6,3 +6,7 @@ html {
 body {
     margin: 0 20px; /* Voeg 20px marges aan de linker- en rechterkant toe */
 }
+
+.container {
+    margin: 0 20px; /* Voeg 20px marges aan de linker- en rechterkant toe */
+}
